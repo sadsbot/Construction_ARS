@@ -3,20 +3,20 @@
 *
 * @author Andrew Ross-Sermons
 * @version 1.0
-* CS131; Project #1
+* CS131; Lab #
 * Spring 2023
 */
 
-public class Business extends Building{
-	protected int numRentableUnits;
+public class SingleFamilyHome extends Residential{
+	private boolean garage;
 	
 	/**
 	 * Default, empty-argument constructor.
 	 */
-	public Business() {
+	public SingleFamilyHome() {
 		super();
-		numRentableUnits = 0;
-	}//end default constructor.
+		garage = false;
+	}//end default constructor
 	
 	/**
 	 * Preferred constructor with parameters for top superclass.
@@ -26,16 +26,16 @@ public class Business extends Building{
 	 * @param occupancyGroup
 	 * @param subGroup
 	 */
-	public Business(String projectName, String completeAddress, double totalSquareFeet, String occupancyGroup, String subGroup) {
+	public SingleFamilyHome(String projectName, String completeAddress, double totalSquareFeet, String occupancyGroup, String subGroup) {
 		super(projectName, completeAddress, totalSquareFeet, occupancyGroup, subGroup);
-		numRentableUnits = 0;
-	}//end preferred constructor.
+		garage = false;
+	}//end preferred constructor
 	
 	/**
 	 * Currently prints a draw status update.
 	 */
 	public void draw() {
-		System.out.println("Drawing Code for Business.");
+		System.out.println("Drawing Code for Apartment.");
 	}//end draw
 	
 	/**
@@ -44,23 +44,25 @@ public class Business extends Building{
 	 */
 	public String displayData() {
 		StringBuilder sb = new StringBuilder(super.displayData());
-		sb.append("\nBusiness");
-		sb.append("\nnumRentableUnits = " + numRentableUnits);
+		sb.append("\nSingleFamilyHome");
+		sb.append("\ngarage = " + garage);
 		sb.append("\n##====================================##");
 		return sb.toString();
 	}//end displayData
 
 	/**
-	 * @return the numRentableUnits
+	 * @return the garage
 	 */
-	public int getNumRentableUnits() {
-		return numRentableUnits;
-	}//end getNumRentableUnits
+	public boolean isGarage() {
+		return garage;
+	}//end isGarage
 
 	/**
-	 * @param numRentableUnits the numRentableUnits to set
+	 * @param garage the garage to set
 	 */
-	public void setNumRentableUnits(int numRentableUnits) {
-		this.numRentableUnits = numRentableUnits;
-	}//end setNumRentableUnits
-}//end
+	public void setGarage(boolean garage) {
+		this.garage = garage;
+	}//end setGarage
+	
+	
+}

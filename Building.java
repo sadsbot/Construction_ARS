@@ -1,5 +1,7 @@
 /**
-* Class Description
+* Highest superclass in program hierarchy.
+* The Building class contains variables of building specifications
+* and methods for accessing and setting those variables.
 *
 * @author Andrew Ross-Sermons
 * @version 1.0
@@ -55,7 +57,7 @@ public class Building {
 		sb.append("\nprojectName = " + projectName + "\ncompleteAddress = " + completeAddress);
 		sb.append("\noccupancyGroup = " + occupancyGroup + "\nsubGroup = " + subGroup);
 		sb.append("\ntotalSquareFeet = " + totalSquareFeet);
-		sb.append("##====================================##");
+		sb.append("\n##====================================##");
 		return sb.toString();
 	}//end displayData
 
@@ -128,4 +130,13 @@ public class Building {
 	public void setTotalSquareFeet(double totalSquareFeet) {
 		this.totalSquareFeet = totalSquareFeet;
 	}//end setTotalSquareFeet
-}
+
+	@Override
+	public String toString() {
+		return "Building [projectName=" + projectName + ", completeAddress=" + completeAddress + ", occupancyGroup="
+				+ occupancyGroup + ", subGroup=" + subGroup + ", totalSquareFeet=" + totalSquareFeet
+				+ ", displayData()=" + displayData() + ", getProjectName()=" + getProjectName()
+				+ ", getCompleteAddress()=" + getCompleteAddress() + ", getOccupancyGroup()=" + getOccupancyGroup()
+				+ ", getSubGroup()=" + getSubGroup() + ", getTotalSquareFeet()=" + getTotalSquareFeet() + "]";
+	}//end toString
+}//end

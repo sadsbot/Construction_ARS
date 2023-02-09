@@ -52,7 +52,7 @@ public class Building {
 	 * @return the String of data
 	 */
 	public String displayData() {
-		StringBuilder sb = new StringBuilder("##====================================##");
+		StringBuilder sb = new StringBuilder("\n\n##====================================##");
 		sb.append("\nBuilding");
 		sb.append("\nprojectName = " + projectName + "\ncompleteAddress = " + completeAddress);
 		sb.append("\noccupancyGroup = " + occupancyGroup + "\nsubGroup = " + subGroup);

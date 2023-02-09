@@ -56,4 +56,47 @@ public class Residential extends Building{
 		sb.append("\n##====================================##");
 		return sb.toString();
 	}//end displayData
+
+	/**
+	 * @return the numBedrooms
+	 */
+	public int getNumBedrooms() {
+		return numBedrooms;
+	}
+
+	/**
+	 * @param numBedrooms the numBedrooms to set
+	 */
+	public void setNumBedrooms(int numBedrooms) {
+		this.numBedrooms = numBedrooms;
+	}
+
+	/**
+	 * @return the numBathrooms
+	 */
+	public int getNumBathrooms() {
+		return numBathrooms;
+	}
+
+	/**
+	 * @param numBathrooms the numBathrooms to set
+	 */
+	public void setNumBathrooms(int numBathrooms) {
+		this.numBathrooms = numBathrooms;
+	}
+
+	/**
+	 * @return the laundryRoom
+	 */
+	public boolean isLaundryRoom() {
+		return laundryRoom;
+	}
+
+	/**
+	 * @param laundryRoom the laundryRoom to set
+	 */
+	public void setLaundryRoom(boolean laundryRoom) {
+		this.laundryRoom = laundryRoom;
+	}
+	
 }

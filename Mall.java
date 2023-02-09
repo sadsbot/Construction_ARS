@@ -24,18 +24,23 @@ public class Mall extends Business{
 	}//end default constructor
 	
 	/**
-	 * Preferred constructor with parameters for Building superclass.
+	 * Preferred constructor with parameters for all variables.
 	 * @param projectName
 	 * @param completeAddress
 	 * @param totalSquareFeet
 	 * @param occupancyGroup
 	 * @param subGroup
+	 * @param numRentableUnits
+	 * @param numRentedUnits
+	 * @param numParkingSpaces
+	 * @param medianUnitSize
 	 */
-	public Mall(String projectName, String completeAddress, double totalSquareFeet, String occupancyGroup, String subGroup) {
-		super(projectName, completeAddress, totalSquareFeet, occupancyGroup, subGroup);
-		numRentedUnits = 0;
-		numParkingSpaces = 0;
-		medianUnitSize = 0;
+	public Mall(String projectName, String completeAddress, double totalSquareFeet, String occupancyGroup, String subGroup,
+			int numRentableUnits, int numRentedUnits, int numParkingSpaces, double medianUnitSize) {
+		super(projectName, completeAddress, totalSquareFeet, occupancyGroup, subGroup, numRentableUnits);
+		this.numRentedUnits = numRentedUnits;
+		this.numParkingSpaces = numParkingSpaces;
+		this.medianUnitSize = medianUnitSize;
 	}//end preferred constructor
 	
 	/**
@@ -100,4 +105,16 @@ public class Mall extends Business{
 	public void setMedianUnitSize(double medianUnitSize) {
 		this.medianUnitSize = medianUnitSize;
 	}//end setMedianUnitSize
+
+	/**
+	 * Returns a string representation of the object.
+	 * @return the String
+	 */
+	@Override
+	public String toString() {
+		return "Mall [numRentedUnits=" + numRentedUnits + ", numParkingSpaces=" + numParkingSpaces + ", medianUnitSize="
+				+ medianUnitSize + ", numRentableUnits=" + numRentableUnits + ", projectName=" + projectName
+				+ ", completeAddress=" + completeAddress + ", occupancyGroup=" + occupancyGroup + ", subGroup="
+				+ subGroup + ", totalSquareFeet=" + totalSquareFeet + "]";
+	}//end toString
 }//end

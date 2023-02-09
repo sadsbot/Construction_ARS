@@ -21,16 +21,21 @@ public class SingleFamilyHome extends Residential{
 	}//end default constructor
 	
 	/**
-	 * Preferred constructor with parameters for Building superclass.
+	 * Preferred constructor with parameters for all variables.
 	 * @param projectName
 	 * @param completeAddress
 	 * @param totalSquareFeet
 	 * @param occupancyGroup
 	 * @param subGroup
+	 * @param numBedrooms
+	 * @param numBathrooms
+	 * @param laundryRoom
+	 * @param garage
 	 */
-	public SingleFamilyHome(String projectName, String completeAddress, double totalSquareFeet, String occupancyGroup, String subGroup) {
-		super(projectName, completeAddress, totalSquareFeet, occupancyGroup, subGroup);
-		garage = false;
+	public SingleFamilyHome(String projectName, String completeAddress, double totalSquareFeet, String occupancyGroup, String subGroup,
+			int numBedrooms, int numBathrooms, boolean laundryRoom, boolean garage) {
+		super(projectName, completeAddress, totalSquareFeet, occupancyGroup, subGroup, numBedrooms, numBathrooms, laundryRoom);
+		this.garage = garage;
 	}//end preferred constructor
 	
 	/**
@@ -65,4 +70,16 @@ public class SingleFamilyHome extends Residential{
 	public void setGarage(boolean garage) {
 		this.garage = garage;
 	}//end setGarage
+
+	/**
+	 * Returns a string representation of the object.
+	 * @return the String
+	 */
+	@Override
+	public String toString() {
+		return "SingleFamilyHome [garage=" + garage + ", numBedrooms=" + numBedrooms + ", numBathrooms=" + numBathrooms
+				+ ", laundryRoom=" + laundryRoom + ", projectName=" + projectName + ", completeAddress="
+				+ completeAddress + ", occupancyGroup=" + occupancyGroup + ", subGroup=" + subGroup
+				+ ", totalSquareFeet=" + totalSquareFeet + "]";
+	}//end toString
 }//end

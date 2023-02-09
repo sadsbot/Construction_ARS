@@ -25,18 +25,25 @@ public class Apartment extends Residential{
 	}//end Apartment
 	
 	/**
-	 * Preferred constructor with parameters for Building superclass.
+	 * Preferred constructor with parameters for all variables.
 	 * @param projectName
 	 * @param completeAddress
 	 * @param totalSquareFeet
 	 * @param occupancyGroup
 	 * @param subGroup
+	 * @param numBedrooms
+	 * @param numBathrooms
+	 * @param laundryRoom
+	 * @param avgUnitSize
+	 * @param numRentableUnits
+	 * @param parkingAvailable
 	 */
-	public Apartment(String projectName, String completeAddress, double totalSquareFeet, String occupancyGroup, String subGroup) {
-		super(projectName, completeAddress, totalSquareFeet, occupancyGroup, subGroup);
-		avgUnitSize = 0;
-		numRentableUnits = 0;
-		parkingAvailable = false;
+	public Apartment(String projectName, String completeAddress, double totalSquareFeet, String occupancyGroup, String subGroup,
+			int numBedrooms, int numBathrooms, boolean laundryRoom, double avgUnitSize, int numRentableUnits, boolean parkingAvailable) {
+		super(projectName, completeAddress, totalSquareFeet, occupancyGroup, subGroup, numBedrooms, numBathrooms, laundryRoom);
+		this.avgUnitSize = avgUnitSize;
+		this.numRentableUnits = numRentableUnits;
+		this.parkingAvailable = parkingAvailable;
 	}//end preferred constructor
 	
 	/**
@@ -101,4 +108,17 @@ public class Apartment extends Residential{
 	public void setParkingAvailable(boolean parkingAvailable) {
 		this.parkingAvailable = parkingAvailable;
 	}//end setParkingAvailable
+
+	/**
+	 * Returns a string representation of the object.
+	 * @return the String
+	 */
+	@Override
+	public String toString() {
+		return "Apartment [avgUnitSize=" + avgUnitSize + ", numRentableUnits=" + numRentableUnits
+				+ ", parkingAvailable=" + parkingAvailable + ", numBedrooms=" + numBedrooms + ", numBathrooms="
+				+ numBathrooms + ", laundryRoom=" + laundryRoom + ", projectName=" + projectName + ", completeAddress="
+				+ completeAddress + ", occupancyGroup=" + occupancyGroup + ", subGroup=" + subGroup
+				+ ", totalSquareFeet=" + totalSquareFeet + "]";
+	}//end toString
 }//end

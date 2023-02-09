@@ -21,16 +21,18 @@ public class Business extends Building{
 	}//end default constructor.
 	
 	/**
-	 * Preferred constructor with parameters for Building superclass.
+	 * Preferred constructor with parameters for all variables.
 	 * @param projectName
 	 * @param completeAddress
 	 * @param totalSquareFeet
 	 * @param occupancyGroup
 	 * @param subGroup
+	 * @param numRentableUnits
 	 */
-	public Business(String projectName, String completeAddress, double totalSquareFeet, String occupancyGroup, String subGroup) {
+	public Business(String projectName, String completeAddress, double totalSquareFeet, String occupancyGroup, String subGroup,
+			int numRentableUnits) {
 		super(projectName, completeAddress, totalSquareFeet, occupancyGroup, subGroup);
-		numRentableUnits = 0;
+		this.numRentableUnits = numRentableUnits;
 	}//end preferred constructor.
 	
 	/**
@@ -65,4 +67,15 @@ public class Business extends Building{
 	public void setNumRentableUnits(int numRentableUnits) {
 		this.numRentableUnits = numRentableUnits;
 	}//end setNumRentableUnits
+
+	/**
+	 * Returns a string representation of the object.
+	 * @return the String
+	 */
+	@Override
+	public String toString() {
+		return "Business [numRentableUnits=" + numRentableUnits + ", projectName=" + projectName + ", completeAddress="
+				+ completeAddress + ", occupancyGroup=" + occupancyGroup + ", subGroup=" + subGroup
+				+ ", totalSquareFeet=" + totalSquareFeet + "]";
+	}//end toString
 }//end

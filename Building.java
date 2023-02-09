@@ -25,7 +25,7 @@ public class Building {
 	}//end default constructor.
 
 	/**
-	 * Preferred constructor with all variables as arguments.
+	 * Preferred constructor with parameters for all variables.
 	 * @param projectName
 	 * @param completeAddress
 	 * @param occupancyGroup
@@ -130,4 +130,14 @@ public class Building {
 	public void setTotalSquareFeet(double totalSquareFeet) {
 		this.totalSquareFeet = totalSquareFeet;
 	}//end setTotalSquareFeet
+
+	/**
+	 * Returns a string representation of the object.
+	 * @return the String
+	 */
+	@Override
+	public String toString() {
+		return "Building [projectName=" + projectName + ", completeAddress=" + completeAddress + ", occupancyGroup="
+				+ occupancyGroup + ", subGroup=" + subGroup + ", totalSquareFeet=" + totalSquareFeet + "]";
+	}//end toString
 }//end

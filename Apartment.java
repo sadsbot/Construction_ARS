@@ -1,9 +1,11 @@
 /**
-* Class Description
+* Third tier of class hierarchy.
+* The Apartment class contains additional data useful for
+* apartments in residential buildings.
 *
 * @author Andrew Ross-Sermons
-* @version 1.0
-* CS131; Construction #1
+* @version 1.1
+* CS131; Project #1
 * Spring 2023
 */
 
@@ -16,13 +18,14 @@ public class Apartment extends Residential{
 	 * Default, empty-argument constructor.
 	 */
 	public Apartment() {
+		super();
 		avgUnitSize = 0;
 		numRentableUnits = 0;
 		parkingAvailable = false;
 	}//end Apartment
 	
 	/**
-	 * Preferred constructor with parameters for top superclass.
+	 * Preferred constructor with parameters for Building superclass.
 	 * @param projectName
 	 * @param completeAddress
 	 * @param totalSquareFeet
@@ -44,7 +47,7 @@ public class Apartment extends Residential{
 	}//end draw
 	
 	/**
-	 * Returns formatted string of all object fields.
+	 * Returns formatted string of all object variables.
 	 * @return the String of data
 	 */
 	public String displayData() {
@@ -98,4 +101,4 @@ public class Apartment extends Residential{
 	public void setParkingAvailable(boolean parkingAvailable) {
 		this.parkingAvailable = parkingAvailable;
 	}//end setParkingAvailable
-}
+}//end

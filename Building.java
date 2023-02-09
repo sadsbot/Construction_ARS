@@ -4,7 +4,7 @@
 * and methods for accessing and setting those variables.
 *
 * @author Andrew Ross-Sermons
-* @version 1.0
+* @version 1.1
 * CS131; Project #1
 * Spring 2023
 */
@@ -25,7 +25,7 @@ public class Building {
 	}//end default constructor.
 
 	/**
-	 * Preferred constructor with all fields as arguments.
+	 * Preferred constructor with all variables as arguments.
 	 * @param projectName
 	 * @param completeAddress
 	 * @param occupancyGroup
@@ -48,7 +48,7 @@ public class Building {
 	}//end draw
 	
 	/**
-	 * Returns formatted string of all object fields.
+	 * Returns formatted string of all object variables.
 	 * @return the String of data
 	 */
 	public String displayData() {
@@ -130,13 +130,4 @@ public class Building {
 	public void setTotalSquareFeet(double totalSquareFeet) {
 		this.totalSquareFeet = totalSquareFeet;
 	}//end setTotalSquareFeet
-
-	@Override
-	public String toString() {
-		return "Building [projectName=" + projectName + ", completeAddress=" + completeAddress + ", occupancyGroup="
-				+ occupancyGroup + ", subGroup=" + subGroup + ", totalSquareFeet=" + totalSquareFeet
-				+ ", displayData()=" + displayData() + ", getProjectName()=" + getProjectName()
-				+ ", getCompleteAddress()=" + getCompleteAddress() + ", getOccupancyGroup()=" + getOccupancyGroup()
-				+ ", getSubGroup()=" + getSubGroup() + ", getTotalSquareFeet()=" + getTotalSquareFeet() + "]";
-	}//end toString
 }//end

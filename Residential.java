@@ -1,9 +1,11 @@
 /**
-* Class Description
+* Second tier of class hierarchy.
+* The Residential class contains additional data useful for
+* residential-related buildings.
 *
 * @author Andrew Ross-Sermons
-* @version 1.0
-* CS131; Construction #1
+* @version 1.1
+* CS131; Project #1
 * Spring 2023
 */
 
@@ -22,7 +24,7 @@ public class Residential extends Building{
 	}//end default constructor
 	
 	/**
-	 * Preferred constructor with parameters for top superclass.
+	 * Preferred constructor with parameters for Building superclass.
 	 * @param projectName
 	 * @param completeAddress
 	 * @param totalSquareFeet
@@ -44,7 +46,7 @@ public class Residential extends Building{
 	}//end draw
 	
 	/**
-	 * Returns formatted string of all object fields.
+	 * Returns formatted string of all object variables.
 	 * @return the String of data
 	 */
 	public String displayData() {
@@ -62,41 +64,40 @@ public class Residential extends Building{
 	 */
 	public int getNumBedrooms() {
 		return numBedrooms;
-	}
+	}//end getNumBedrooms
 
 	/**
 	 * @param numBedrooms the numBedrooms to set
 	 */
 	public void setNumBedrooms(int numBedrooms) {
 		this.numBedrooms = numBedrooms;
-	}
+	}//end setNumBedrooms
 
 	/**
 	 * @return the numBathrooms
 	 */
 	public int getNumBathrooms() {
 		return numBathrooms;
-	}
+	}//end getNumBathrooms
 
 	/**
 	 * @param numBathrooms the numBathrooms to set
 	 */
 	public void setNumBathrooms(int numBathrooms) {
 		this.numBathrooms = numBathrooms;
-	}
+	}//end setNumBathrooms
 
 	/**
 	 * @return the laundryRoom
 	 */
 	public boolean isLaundryRoom() {
 		return laundryRoom;
-	}
+	}//end isLaundryRoom
 
 	/**
 	 * @param laundryRoom the laundryRoom to set
 	 */
 	public void setLaundryRoom(boolean laundryRoom) {
 		this.laundryRoom = laundryRoom;
-	}
-	
-}
+	}//end setLaundryRoom
+}//end

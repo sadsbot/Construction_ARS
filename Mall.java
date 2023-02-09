@@ -1,9 +1,11 @@
 /**
-* Class Description
+* Third tier of class hierarchy.
+* The Mall class contains additional data useful for
+* mall businesses.
 *
 * @author Andrew Ross-Sermons
-* @version 1.0
-* CS131; Construction #1
+* @version 1.1
+* CS131; Project #1
 * Spring 2023
 */
 
@@ -22,7 +24,7 @@ public class Mall extends Business{
 	}//end default constructor
 	
 	/**
-	 * Preferred constructor with parameters for top superclass.
+	 * Preferred constructor with parameters for Building superclass.
 	 * @param projectName
 	 * @param completeAddress
 	 * @param totalSquareFeet
@@ -44,7 +46,7 @@ public class Mall extends Business{
 	}//end draw
 	
 	/**
-	 * Returns formatted string of all object fields.
+	 * Returns formatted string of all object variables.
 	 * @return the String of data
 	 */
 	public String displayData() {

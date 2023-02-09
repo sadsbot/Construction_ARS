@@ -1,8 +1,10 @@
 /**
-* Class Description
+* Second tier of class hierarchy.
+* The Business class contains additional data useful for
+* business-related buildings.
 *
 * @author Andrew Ross-Sermons
-* @version 1.0
+* @version 1.1
 * CS131; Project #1
 * Spring 2023
 */
@@ -19,7 +21,7 @@ public class Business extends Building{
 	}//end default constructor.
 	
 	/**
-	 * Preferred constructor with parameters for top superclass.
+	 * Preferred constructor with parameters for Building superclass.
 	 * @param projectName
 	 * @param completeAddress
 	 * @param totalSquareFeet
@@ -39,7 +41,7 @@ public class Business extends Building{
 	}//end draw
 	
 	/**
-	 * Returns formatted string of all object fields.
+	 * Returns formatted string of all object variables.
 	 * @return the String of data
 	 */
 	public String displayData() {
